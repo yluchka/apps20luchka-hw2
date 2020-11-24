@@ -34,8 +34,8 @@ public final class ImmutableLinkedList implements ImmutableList {
             return data;
         }
 
-        public void setData(Object data) {
-            this.data = data;
+        public void setData(Object dataSet) {
+            data = dataSet;
         }
 
     }
@@ -111,8 +111,12 @@ public final class ImmutableLinkedList implements ImmutableList {
         if (c.length == 0) {
             return new ImmutableLinkedList(newHead);
         }
-
-        int startFrom = index == 0 ? 1 : 0;
+        int startFrom;
+        if (index == 0) {
+            startFrom = 1;
+        } else {
+            startFrom = 0;
+        }
 
         if (startFrom == 1) {
             newHead = addFirst(c[0]).getHead();
