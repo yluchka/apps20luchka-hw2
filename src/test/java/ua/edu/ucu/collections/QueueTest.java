@@ -63,7 +63,5 @@ public class QueueTest {
         standart.enqueue(5);
         assertArrayEquals(expectedStandart, standart.toArray());
     }
-
-
 }
 

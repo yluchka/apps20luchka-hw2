@@ -27,11 +27,11 @@ public class StackTest {
         empty.push(1);
         assertArrayEquals(expectedEmptyPush, empty.toArray());
 
-        Object[] expectedUnitaryPush = new Object[]{2,1 };
+        Object[] expectedUnitaryPush = new Object[]{2, 1};
         unitary.push(2);
         assertArrayEquals(expectedUnitaryPush, unitary.toArray());
 
-        Object[] expectedStandartPush = new Object[]{ 1,4, 2, 7, 8};
+        Object[] expectedStandartPush = new Object[]{1, 4, 2, 7, 8};
         standart.push(1);
         assertArrayEquals(expectedStandartPush, standart.toArray());
     }
@@ -48,7 +48,7 @@ public class StackTest {
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void testEmptyPop(){
+    public void testEmptyPop() {
         empty.pop();
     }
 
@@ -60,7 +60,7 @@ public class StackTest {
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void testEmptyPeek(){
+    public void testEmptyPeek() {
         empty.peek();
     }
 }
