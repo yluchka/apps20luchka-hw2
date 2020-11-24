@@ -114,26 +114,60 @@ public class ImmutableLinkedListTest {
     @Test(expected = IndexOutOfBoundsException.class)
     public void testingAddError() {
         empty.add(5, 5);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingAddErrorSecond() {
         empty.addAll(5, stadart.toArray());
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingAddErrorThird() {
+        empty.addAll(-5, stadart.toArray());
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void testingGetError() {
         stadart.get(10);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingGetErrorSecond() {
         stadart.get(-10);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void testingRemoveError() {
         stadart.remove(10);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingRemoveErrorSec() {
         stadart.remove(-10);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingRemoveFirstEmptyError() {
         empty.removeFirst();
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingRemoveLastEmptyError() {
         empty.removeLast();
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingRemoveErrorSecond() {
+        stadart.remove(-10);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void testingSetError() {
         stadart.set(-1, 5);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingSetErrorSecond() {
         stadart.set(10, 5);
     }
 

@@ -63,7 +63,15 @@ public class ImmutableArrayListTest {
     @Test(expected = IndexOutOfBoundsException.class)
     public void testingAddError() {
         empty.add(5, 5);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingAddErrorSecond() {
         empty.addAll(5, stadart.toArray());
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingAddErrorThird() {
         empty.addAll(-4, stadart.toArray());
     }
 
@@ -86,6 +94,10 @@ public class ImmutableArrayListTest {
     @Test(expected = IndexOutOfBoundsException.class)
     public void testingRemoveError() {
         stadart.remove(10);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testingRemoveErrorSecond() {
         stadart.remove(-10);
     }
 
@@ -111,7 +123,7 @@ public class ImmutableArrayListTest {
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void testingGetError() {
-        stadart.get(-10);
+        stadart.get(10);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
